@@ -1,4 +1,4 @@
-package tag.数组;
+package tag.数组.easy;
 
 /**
  * @author zrfan
