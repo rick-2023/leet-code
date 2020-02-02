@@ -11,6 +11,8 @@ public class LeetCode_198 {
    *  找出规律
    *  转为 dp[i-2]+nums[i] 与 dp[i-1] max
    *
+   *  [1,3,2,1] ---> 4
+   *
    *  注意数组越界情况 判断length==0 和 length==1的情况
    * @param nums
    * @return
