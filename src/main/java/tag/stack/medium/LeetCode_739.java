@@ -9,6 +9,10 @@ import java.util.Stack;
  */
 public class LeetCode_739 {
 
+  public static void main(String[] args) {
+
+  }
+
   /**
    * 分析
    *  复制一个新的数组res,由于结果是天数与实际温度差无关 故想到 栈 存储的数组下标
