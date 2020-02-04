@@ -1,4 +1,4 @@
-package tag.其他;
+package tag.其他.easy;
 
 /**
  * @author zrfan
