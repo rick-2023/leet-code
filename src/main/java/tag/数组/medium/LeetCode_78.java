@@ -28,6 +28,8 @@ public class LeetCode_78 {
   /**
    *
    * 大致思路是可以理解 具体细节后面还要继续 推敲 暂时先跳过了
+   * dfs思想
+   *  start确保不会重复计数
    * @param nums
    * @return
    */
@@ -67,6 +69,7 @@ public class LeetCode_78 {
     List<List<Integer>> result = leetCode_78.subsets(nums);
 
     System.out.println(result);
+
   }
 
 }
