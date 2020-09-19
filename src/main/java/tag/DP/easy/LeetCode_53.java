@@ -13,8 +13,8 @@ public class LeetCode_53 {
    *  每次循环比较当前值与历史max的最大值
    * nums[]   -2，1，-3，4，-1，2，1，-5，4
    * result[] -2，1，-2，4，3， 5，6，1， 5
-   * @param nums
-   * @return
+   * @param nums 数组
+   * @return 结果
    */
   public int maxSubArray(int[] nums) {
 
