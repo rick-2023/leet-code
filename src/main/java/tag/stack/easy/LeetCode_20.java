@@ -11,11 +11,11 @@ public class LeetCode_20 {
 
   /**
    * 判断括号是否合法
-   *  借助
-   *    HashMap 维护对应匹配的括号
-   *    Stack 如果map没有对应的key 往stack中push
-   *
-   *   若是合法的 理论上最终 stack是空的
+   * 借助
+   * HashMap 维护对应匹配的括号
+   * Stack 如果map没有对应的key 往stack中push
+   * <p>
+   * 若是合法的 理论上最终 stack是空的
    *
    * @param s
    * @return
@@ -27,7 +27,7 @@ public class LeetCode_20 {
       return true;
     }
 
-    HashMap<Character, Character> map = new HashMap<>();
+    HashMap<Character, Character> map = new HashMap<>(16);
     map.put(')', '(');
     map.put(']', '[');
     map.put('}', '{');
