@@ -6,7 +6,7 @@ package tag.链表.easy;
  */
 public class PalindromeLinkedList234 {
 
-  /**
+  /*
    * 问题描述
    *  判断单链表是否回环
    * 解题思路
