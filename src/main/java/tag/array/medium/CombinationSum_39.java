@@ -12,7 +12,7 @@ import java.util.List;
  * @author zrfan
  * @date 2020/02/05.
  */
-public class LeetCode_39 {
+public class CombinationSum_39 {
 
   /**
    * Input: candidates = [2,3,6,7], target = 7,
@@ -35,7 +35,8 @@ public class LeetCode_39 {
 
   }
 
-  public void dfs(int[] candidates, int start, int sum, List<List<Integer>> result, List<Integer> path, int target) {
+  public void dfs(int[] candidates, int start, int sum,
+                  List<List<Integer>> result, List<Integer> path, int target) {
 
     if (sum == target) {
       result.add(new ArrayList<>(path));
@@ -65,11 +66,11 @@ public class LeetCode_39 {
 
   public static void main(String[] args) {
     // 测试
-    LeetCode_39 leetCode_39 = new LeetCode_39();
+    CombinationSum_39 combinationSum_39 = new CombinationSum_39();
     int[] candidates = {2,3,6,7};
     int target = 7;
 
-    List<List<Integer>> result = leetCode_39.combinationSum(candidates, target);
+    List<List<Integer>> result = combinationSum_39.combinationSum(candidates, target);
 
     System.out.println(result);
   }
