@@ -1,4 +1,4 @@
-package tag.数组.medium;
+package tag.array.medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package tag.数组.easy;
+package tag.array.easy;
 
 import java.util.ArrayList;
 import java.util.Arrays;

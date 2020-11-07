@@ -1,6 +1,4 @@
-package tag.数组.easy;
-
-import javax.sound.midi.Soundbank;
+package tag.array.easy;
 
 /**
  * @author zrfan

@@ -1,16 +1,10 @@
-package tag.数组.easy;
+package tag.array.easy;
 
 /**
  * @author zrfan
  * @date 2020/10/23.
  */
 public class RunningSumOf1dArray {
-
-  /*
-
-
-
-  */
 
   /**
    * Input: nums = [1,2,3,4]

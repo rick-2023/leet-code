@@ -1,4 +1,4 @@
-package tag.数组.easy;
+package tag.array.easy;
 
 /**
  * 35. Search Insert Position 二分法
