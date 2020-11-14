@@ -22,15 +22,38 @@ public class SumOfAllOddLengthSubarrays_1588 {
 
   public int sumOddLengthSubarrays(int[] arr) {
 
+    int sum = 0;
+
     if (arr == null || arr.length == 0) {
       return 0;
     }
 
     int length = arr.length;
-    boolean odd = length % 2 != 0;
+
+    for (int i = 0; i < length; i++) {
+
+      int start = length - i;
+      int end = i+1;
+
+      int totoalArray = start * end;
+      int subarray = totoalArray/2;
+      if (totoalArray % 2 ==1) {
+        subarray++;
+      }
+
+      sum += arr[i]*subarray;
+    }
 
 
-    return -1;
+
+    return sum;
+  }
+
+  public static void main(String[] args) {
+    int[] arr = {1,4,2,5,3};
+    SumOfAllOddLengthSubarrays_1588 sumOfAllOddLengthSubarrays_1588 = new SumOfAllOddLengthSubarrays_1588();
+    int i = sumOfAllOddLengthSubarrays_1588.sumOddLengthSubarrays(arr);
+    System.out.println(i);
   }
 
 }
