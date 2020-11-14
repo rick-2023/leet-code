@@ -20,17 +20,50 @@ package tag.array.easy;
  */
 public class SumOfAllOddLengthSubarrays_1588 {
 
+  /**
+   *
+   * 解题思路
+   * 1.计算以数组中每个数字开始或结尾的数组数量，然后相乘
+   * 2.重复计算的情况 除以2 有奇数个和偶数个数组的区别
+   * 3.如果结果为奇数 再加1
+   * 4.数组下标对应的值乘以 第3步的结果 累计相加sum
+   * @param arr
+   * @return
+   */
   public int sumOddLengthSubarrays(int[] arr) {
+
+    int sum = 0;
 
     if (arr == null || arr.length == 0) {
       return 0;
     }
 
     int length = arr.length;
-    boolean odd = length % 2 != 0;
+
+    for (int i = 0; i < length; i++) {
+
+      int start = length - i;
+      int end = i+1;
+
+      int totoalArray = start * end;
+      int subarray = totoalArray/2;
+      if (totoalArray % 2 ==1) {
+        subarray++;
+      }
+
+      sum += arr[i]*subarray;
+    }
 
 
-    return -1;
+
+    return sum;
+  }
+
+  public static void main(String[] args) {
+    int[] arr = {1,4,2,5,3};
+    SumOfAllOddLengthSubarrays_1588 sumOfAllOddLengthSubarrays_1588 = new SumOfAllOddLengthSubarrays_1588();
+    int i = sumOfAllOddLengthSubarrays_1588.sumOddLengthSubarrays(arr);
+    System.out.println(i);
   }
 
 }
