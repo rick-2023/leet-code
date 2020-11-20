@@ -32,5 +32,8 @@
 
         
         
+## 其他
+  - IDEA中推荐安装 `leetcode editor` 插件
+        
 
         
