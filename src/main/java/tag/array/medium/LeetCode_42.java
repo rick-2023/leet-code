@@ -3,6 +3,8 @@ package tag.array.medium;
 /**
  * 数组装水
  *
+ * 只 care 自己这个位置最上方能装多少水
+ *
  * @author zrfan
  * @date 2021/03/13.
  */
