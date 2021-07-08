@@ -10,7 +10,9 @@ public class JumpGame_55 {
    * 解法 1 dp 每一跳是取决于 上一跳剩余的 和 nums[i] 的最大值 如果大于 1 说明可以调到下一跳
    * dp[i] = max(dp[i-1],nums[i-1]) -1
    *
+   * 解法 2 贪心，还不是足够了解
    * @param nums
+   *
    * @return
    */
   public boolean canJump(int[] nums) {
