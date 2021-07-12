@@ -62,6 +62,7 @@ public class SortList_148 {
     // 找到中点 不断拆分
 
     ListNode l2 = sort(slow.next, end);
+    // 拆分时需要将两段链表 解除联系
     slow.next = null;
     ListNode l1 = sort(start, slow);
 
