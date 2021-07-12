@@ -55,6 +55,17 @@ public class LeetCode_199 {
   }
 
 
+  /**
+   * 借此复习下queue 的几个方法
+   * add 添加元素
+   *
+   * remove 移除头元素并取出，队列为空抛 nosuchElementException
+   * poll，移除头元素并取出，队列为空则返回 null
+   *
+   * peek 获取头元素 不取出，队列为空则返回 null
+   * @param root
+   * @return
+   */
   public List<Integer> rightSideViewBFS(TreeNode root) {
 
     List<Integer> res = new ArrayList<>();
