@@ -1,4 +1,4 @@
-package tag.array.medium;
+package tag.array.easy;
 
 /**
  *

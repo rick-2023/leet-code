@@ -4,6 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
+ * 示例
+ *  输入[1,2,3]
+ *  输出 所有的全排列
+ *
  * 回溯算法 模板如下
  *
  * xxx 临界条件
@@ -38,9 +42,12 @@ public class Permutations_46 {
 
     // 临界条件，该回去了
     if (curr.size() == nums.length) {
+      // 注意这里 curr要 new一个不然还是引用，后面 remove 会把它移除完的
       result.add(new ArrayList<>(curr));
       return;
     }
+
+
     for (int i = 0; i < nums.length; i++) {
 
 
@@ -57,6 +64,9 @@ public class Permutations_46 {
 
 
   }
+
+
+
 
   public static void main(String[] args) {
 
