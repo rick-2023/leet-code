@@ -1,7 +1,5 @@
 package tag.backtracking.medium;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Input: tiles = "AAB"
@@ -23,12 +21,12 @@ public class LetterTilePossibilities_1079 {
   public int numTilePossibilities(String tiles) {
 
 
-    int[] chars = new int[26];
+    int[] record = new int[26];
     for (Character c : tiles.toCharArray()) {
-      chars[c - 'A']++;
+      record[c - 'A']++;
     }
 
-    return help(chars);
+    return help(record);
   }
 
   private int help(int[] record) {
