@@ -1,4 +1,4 @@
-package tag.array.medium;
+package tag.prefixSum;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -12,8 +12,8 @@ public class SubArraySumK_560 {
   public int subarraySum(int[] nums, int k) {
 
 
-    //return method2(nums, k);
-    return method3(nums, k);
+    return method2(nums, k);
+    //return method3(nums, k);
 
   }
 
@@ -40,6 +40,7 @@ public class SubArraySumK_560 {
 
 
     return res;
+
   }
 
   private int method3(int[] nums, int k) {
@@ -63,13 +64,13 @@ public class SubArraySumK_560 {
     }
 
 
-    return map.get(temp-k);
+    return map.get(temp - k);
   }
 
 
   public static void main(String[] args) {
     SubArraySumK_560 subArraySumK_560 = new SubArraySumK_560();
-    int[] arr = {0,1, -1, 0};
+    int[] arr = {0, 1, -1, 0};
     int k = 0;
     int i = subArraySumK_560.subarraySum(arr, k);
 
