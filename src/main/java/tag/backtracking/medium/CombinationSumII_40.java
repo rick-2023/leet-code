@@ -41,6 +41,15 @@ public class CombinationSumII_40 {
 
     for (int i = start; i < candidates.length; i++) {
 
+      if (candidates[i] > target) {
+        return;
+      }
+
+      // 过滤重复元素
+      if (i > start && candidates[i] == candidates[i - 1]) {
+        continue;
+      }
+
       temp.add(candidates[i]);
       help(candidates, i + 1, target - candidates[i], temp);
       temp.remove(temp.size() - 1);
