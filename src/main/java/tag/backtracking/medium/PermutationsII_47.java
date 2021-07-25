@@ -13,6 +13,8 @@ import java.util.Set;
  * [2,1,1]]
  *
  *
+ * 1.boolean[] used
+ * 2.hashmap 记录 被用过--
  *
  * @author zrfan
  * @date 2021/07/25.
