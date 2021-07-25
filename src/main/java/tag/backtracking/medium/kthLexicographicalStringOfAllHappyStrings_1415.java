@@ -18,6 +18,8 @@ import java.util.List;
  * happy string of length 3 ["aba", "abc", "aca", "acb", "bab", "bac", "bca", "bcb", "cab", "cac", "cba", "cbc"].
  * You will find the 9th string = "cab"
  *
+ * 注意相邻的不能要要剪枝剪掉，
+ *
  * @author zrfan
  * @date 2021/07/25.
  */
