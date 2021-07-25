@@ -1,4 +1,4 @@
-package tag.array.medium;
+package tag.backtracking.medium;
 
 import java.util.ArrayList;
 import java.util.Arrays;
