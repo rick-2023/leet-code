@@ -1,6 +1,5 @@
 package tag.backtracking.medium;
 
-import tag.array.easy.KidsWithTheGreatestNumberOfCandies_1431;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,6 +41,7 @@ public class kthLexicographicalStringOfAllHappyStrings_1415 {
       return;
     }
 
+    // for循环要先定义好happy string 组成的字符串。。
     for (char ch : chars) {
 
       // 第一次就直接加
