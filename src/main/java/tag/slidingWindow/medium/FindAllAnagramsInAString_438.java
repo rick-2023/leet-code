@@ -1,4 +1,4 @@
-package tag.其他.medium.slidingWindow;
+package tag.slidingWindow.medium;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -22,6 +22,7 @@ public class FindAllAnagramsInAString_438 {
     List<Integer> res = new ArrayList<>();
     Map<Character, Integer> map = new HashMap<>();
 
+    // 目标字符串 每个字符出现的次数
     for (int i = 0; i < p.length(); i++) {
       map.put(p.charAt(i), map.getOrDefault(p.charAt(i), 0) + 1);
     }
@@ -48,6 +49,7 @@ public class FindAllAnagramsInAString_438 {
 
         // 上面减掉的 value重新加回去
         Character tempc = s.charAt(start);
+
         if (map.containsKey(tempc)) {
           map.put(tempc, map.get(tempc) + 1);
 
