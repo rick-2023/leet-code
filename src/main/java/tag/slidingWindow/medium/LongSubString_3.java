@@ -31,7 +31,6 @@ public class LongSubString_3 {
 
         // abba 刚开始到最后一个 a的时候，slow=2,走完逻辑后，slow=1之前 a出现在 0，故+1=1，注意 slow 不能往前退了，所以 slow= Math.max(slow,xxx);
         slow = Math.max(slow, lastOccurred.get(c) + 1);
-        lastOccurred.put(c, fast);
 
       }
 
