@@ -1,6 +1,8 @@
 package tag.链表.medium;
 
 
+import common.ListNode;
+
 /**
  * 归并排序 先 sort --> sort --> merge
  *
@@ -17,22 +19,7 @@ public class SortList_148 {
 
 
   // Definition for singly-linked list.
-  public class ListNode {
-    int val;
-    ListNode next;
 
-    ListNode() {
-    }
-
-    ListNode(int val) {
-      this.val = val;
-    }
-
-    ListNode(int val, ListNode next) {
-      this.val = val;
-      this.next = next;
-    }
-  }
 
   public ListNode sortList(ListNode head) {
 
