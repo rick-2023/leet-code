@@ -14,7 +14,7 @@ public class LongSubString_3 {
 
   public int lengthOfLongestSubstring(String s) {
 
-    // 记录每个字符上次出现的位置
+    // 记录每个字符最近一次出现的位置
     Map<Character, Integer> lastOccurred = new HashMap<>();
 
     if (s == null || s.length() == 0) {
