@@ -61,6 +61,7 @@ public class ReverseLinkedList_206 {
       return head;
     }
 
+    // 递归完就变这样子了 1->2<-3<-4<-5
     ListNode last = reverse(head.next);
 
     head.next.next = head;
