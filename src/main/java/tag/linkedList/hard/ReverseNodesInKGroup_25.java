@@ -34,7 +34,7 @@ public class ReverseNodesInKGroup_25 {
 
     for (int i = 0; i < k; i++) {
 
-      // 不足k个了
+      // bad case: 不足k个了
       if (b == null) {
         return head;
       }
@@ -52,7 +52,7 @@ public class ReverseNodesInKGroup_25 {
   }
 
 
-  // 反转a-b之间的节点 [左闭右开)
+  // 反转a-b之间的节点 [ 左闭右开 )
   public ListNode reverse(ListNode a, ListNode b) {
 
     ListNode pre, cur, next;
