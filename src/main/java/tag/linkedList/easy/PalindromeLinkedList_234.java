@@ -21,6 +21,7 @@ public class PalindromeLinkedList_234 {
   public boolean isPalindrome(ListNode head) {
 
     ListNode slow = head, fast = head;
+    // 注意快慢指针的写法
     while (fast != null && fast.next != null) {
       slow = slow.next;
       fast = fast.next.next;
