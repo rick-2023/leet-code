@@ -1,4 +1,4 @@
-package tag.链表.easy;
+package tag.linkedList.easy;
 
 /**
  * @author zrfan

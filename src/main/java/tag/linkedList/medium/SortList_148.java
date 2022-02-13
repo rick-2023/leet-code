@@ -1,4 +1,4 @@
-package tag.链表.medium;
+package tag.linkedList.medium;
 
 
 import common.ListNode;

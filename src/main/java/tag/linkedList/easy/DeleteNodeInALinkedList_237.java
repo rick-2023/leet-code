@@ -1,4 +1,4 @@
-package tag.链表.easy;
+package tag.linkedList.easy;
 
 import common.ListNode;
 
@@ -10,7 +10,7 @@ import common.ListNode;
  * @date 2022/02/12.
  */
 public class DeleteNodeInALinkedList_237 {
-  
+
   /**
    * 思路，因为不是从head节点开始，则需要先将node节点的next节点值赋值给node,并删除node.next
    */
