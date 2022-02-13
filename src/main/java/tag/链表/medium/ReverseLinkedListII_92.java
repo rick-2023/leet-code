@@ -41,8 +41,8 @@ public class ReverseLinkedListII_92 {
       return dummy.next;
     }
 
-    ListNode l = second;
-    ListNode r = l.next;
+    ListNode l = second; // 操作完后，变成第二段的第1个节点，即4
+    ListNode r = l.next; // 操作完后，变成第三段的第1个节点，即5
 
     for (int i = left; i < right; i++) {
 
