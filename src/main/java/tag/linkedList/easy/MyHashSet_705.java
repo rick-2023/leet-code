@@ -10,7 +10,8 @@ import java.util.List;
  */
 public class MyHashSet_705 {
 
-  final int TOTAL_BUCKETS = 769; //prime number for almost even distribution across
+  final int TOTAL_BUCKETS = 769;
+  // 数组中是list
   List<Integer>[] buckets;
 
   public MyHashSet_705() {
