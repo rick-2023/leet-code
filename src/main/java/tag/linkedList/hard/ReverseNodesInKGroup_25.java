@@ -16,7 +16,7 @@ public class ReverseNodesInKGroup_25 {
   /**
    * 思路根据全反转的题目可知，反转一个区间链表的代码如 reverse(a,b),作为help方法用于对k个小区间的链表进行反转
    *
-   * 注意递归的bad case为，如k=2时，最后的5只剩1个小于2，直接终止递归
+   * 注意递归的bad case为，如k=2时，最后的5只剩1个 小于2，直接终止递归
    *
    * 对于1->2来说，此时b指向了3，左闭右开，newHead指向了2，反转后的a为链表尾节点
    * 需要执行后面的递归出来头节点故 得到 a.next = reverseKGroup(b, k);
