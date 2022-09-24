@@ -4,6 +4,10 @@ import java.util.Arrays;
 import java.util.Stack;
 
 /**
+ * 2022.9.24 重做该题，基于单调栈
+ *
+ *
+ *
  * @author zrfan
  * @date 2020/02/03.
  */
@@ -11,6 +15,35 @@ public class LeetCode_739 {
 
   public static void main(String[] args) {
 
+  }
+
+  /**
+   * 基于单调栈，栈中存放索引i，
+   * @since 2022.09.24
+   * @param temperatures
+   * @return
+   */
+  public int[] dailyTemperatures2(int[] temperatures) {
+
+    if(temperatures==null || temperatures.length==0){
+      return temperatures;
+    }
+
+    int[] result = new int[temperatures.length];
+    // 存放索引
+    Stack<Integer> s = new Stack<>();
+
+    for(int i = temperatures.length-1; i>=0;i--) {
+
+      while(!s.isEmpty() && temperatures[i]>=temperatures[s.peek()]) {
+        s.pop();
+      }
+
+      // 栈不为空，则由栈顶-索引i 即为相聚的距离
+      result[i] = s.isEmpty() ? 0 : s.peek() - i;
+      s.push(i);
+    }
+    return result;
   }
 
   /**
