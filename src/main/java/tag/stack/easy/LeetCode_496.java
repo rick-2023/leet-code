@@ -7,6 +7,8 @@ import java.util.Stack;
 /**
  * 相关知识点 单调栈
  *
+ * 循环数组的套路 长度加倍
+ *
  * @author zrfan
  * @date 2022/09/24.
  */
