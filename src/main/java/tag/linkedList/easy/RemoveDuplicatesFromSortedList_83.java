@@ -21,7 +21,7 @@ public class RemoveDuplicatesFromSortedList_83 {
 
     ListNode cur = head;
 
-    while (cur!=null && cur.next != null){
+    while (cur != null && cur.next != null) {
 
       if (cur.val == cur.next.val) {
         cur.next = cur.next.next;
@@ -34,4 +34,39 @@ public class RemoveDuplicatesFromSortedList_83 {
     return head;
 
   }
+
+  /**
+   * 快慢指针
+   *
+   * @param head
+   * @return
+   */
+  public ListNode deleteDuplicates2(ListNode head) {
+
+    // 1->1->2
+
+    if (head == null) {
+      return head;
+    }
+
+    ListNode slow = head, fast = head;
+
+    while (fast != null) {
+
+      if (slow.val != fast.val) {
+        slow.next = fast;
+        slow = slow.next;
+      }
+
+      fast = fast.next;
+    }
+
+
+    // 断开slow后面的元素后，最后返回head
+    slow.next = null;
+
+    return head;
+
+  }
+
 }
