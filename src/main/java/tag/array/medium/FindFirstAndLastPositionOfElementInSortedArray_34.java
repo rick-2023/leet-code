@@ -25,7 +25,9 @@ public class FindFirstAndLastPositionOfElementInSortedArray_34 {
   public int[] searchRange(int[] nums, int target) {
 
     int[] res = {-1,-1};
+    // 左侧搜索区间
     res[0] = findFirst(nums, target);
+    // 右侧搜索区间
     res[1] = findLast(nums, target);
     return res;
   }
