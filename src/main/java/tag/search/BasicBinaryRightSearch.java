@@ -34,6 +34,7 @@ public class BasicBinaryRightSearch {
 
     }
 
+    // 当left=right+1时 即right=left-1
     if (left - 1 < 0) {
       return -1;
     }

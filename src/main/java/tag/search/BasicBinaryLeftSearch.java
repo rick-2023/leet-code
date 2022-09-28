@@ -33,11 +33,12 @@ public class BasicBinaryLeftSearch {
 
     }
 
-    // 没有一个比他大的
+    // 没有一个比他大的 {2,3,5,7} target=8   ---> -1
     if (left == nums.length) {
       return -1;
     }
 
+    // {2,3,5,7} target=1  --> -1
     return nums[left] == target ? left : -1;
 
   }
