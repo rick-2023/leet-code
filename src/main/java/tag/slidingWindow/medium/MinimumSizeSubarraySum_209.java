@@ -36,10 +36,38 @@ public class MinimumSizeSubarraySum_209 {
   }
 
 
+  public int minSubArrayLen2(int target, int[] nums) {
+
+    int left = 0, sum = 0, result = Integer.MAX_VALUE;
+
+    for (int right = 0; right < nums.length; right++) {
+
+      sum += nums[right];
+
+      while (sum >= target) {
+
+        //  长度要再加1
+        result = Math.min(result, right - left + 1);
+        sum -= nums[left];
+        left++;
+
+      }
+
+
+    }
+
+    return result;
+  }
+
+
   public static void main(String[] args) {
     MinimumSizeSubarraySum_209 minimumSizeSubarraySum_209 = new MinimumSizeSubarraySum_209();
-    int i = minimumSizeSubarraySum_209.minSubArrayLen(4, new int[]{2,2,1,4});
-    //int i = minimumSizeSubarraySum_209.minSubArrayLen(7, new int[]{2, 3, 1, 2, 4, 3});
+    int i = minimumSizeSubarraySum_209.minSubArrayLen(4, new int[]{2, 2, 1, 4});
+    int j = minimumSizeSubarraySum_209.minSubArrayLen(7, new int[]{2, 3, 2, 2, 4, 3});
+    int k = minimumSizeSubarraySum_209.minSubArrayLen2(7, new int[]{2, 3, 2, 2, 4, 3});
+
     System.out.println(i);
+    System.out.println(j);
+    System.out.println(k);
   }
 }
