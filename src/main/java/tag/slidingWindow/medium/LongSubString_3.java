@@ -1,5 +1,7 @@
 package tag.slidingWindow.medium;
 
+import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,6 +9,7 @@ import java.util.Map;
  * abba -->2
  * 最长子串 首先考虑滑动窗口，两个快慢指针，一个 map 空间换时间
  * 没出现过的元素直接 put<char, index> ,已经出现过的 更新到上次出现位置的后一位，同时将慢指针 slow移到该位置
+ *
  * @author zrfan
  * @date 2021/07/05.
  */
@@ -41,6 +44,55 @@ public class LongSubString_3 {
 
 
     return max;
+  }
+
+
+  /**
+   * 输入: s = "abcabcbb"
+   * 输出: 3
+   * 解释: 因为无重复字符的最长子串是 "abc"，所以其长度为 3。
+   *
+   * @param s
+   * @return
+   */
+  public static int lengthOfLongestSubstring2(String s) {
+
+    if (s == null || s.length() == 0) {
+      return 0;
+    }
+
+    char[] ss = s.toCharArray();
+    int left = 0, right = 0;
+    int res = 0;
+    Map<Character, Integer> window = new HashMap<>();
+
+    while (right < s.length()) {
+
+      char c = ss[right];
+      right++;
+
+      window.put(c, window.getOrDefault(c, 0) + 1);
+
+      while (window.get(c) > 1) {
+
+        char d = ss[left];
+        left++;
+
+        window.put(d, window.get(d) - 1);
+
+      }
+
+      res = Math.max(res, right-left);
+
+    }
+
+    return res;
+  }
+
+  @Test
+  public void test2() {
+    int len = lengthOfLongestSubstring2("abcabcbb");
+    System.out.println(len);
   }
 
   public static void main(String[] args) {

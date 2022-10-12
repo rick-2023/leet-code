@@ -120,7 +120,7 @@ public class FindAllAnagramsInAString_438 {
         }
       }
 
-      // 缩短左边的区间
+      // 缩短左边的区间的条件为 整个区间[left, right)大于等于p的长度
       while (right - left >= p.length()) {
 
         if (valid == need.size()) {
