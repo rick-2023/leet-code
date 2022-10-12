@@ -18,7 +18,7 @@ public class BasicBinaryLeftSearch {
       int mid = left + (right - left) / 2;
       if (nums[mid] == target) {
 
-        // [x,y)
+        // [x,y), if相等别返回
         right = mid - 1;
 
       } else if (nums[mid] > target) {
