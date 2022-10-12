@@ -34,6 +34,7 @@ public class PermutationInString_567 {
       char r = c[right];
       right++;
 
+      //将需要关注的字符存入windows中
       if (needs.containsKey(r)) {
 
         windows.put(r, windows.getOrDefault(r, 0) + 1);
