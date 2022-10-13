@@ -73,6 +73,7 @@ public class LongSubString_3 {
 
       window.put(c, window.getOrDefault(c, 0) + 1);
 
+      // 缩小左边窗口
       while (window.get(c) > 1) {
 
         char d = ss[left];
@@ -82,7 +83,7 @@ public class LongSubString_3 {
 
       }
 
-      res = Math.max(res, right-left);
+      res = Math.max(res, right - left);
 
     }
 

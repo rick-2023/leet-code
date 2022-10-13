@@ -1,5 +1,7 @@
 package tag.slidingWindow.easy;
 
+import org.junit.Test;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -61,6 +63,42 @@ public class ContainsDuplicateII_219 {
 
     return false;
 
+  }
+
+
+  // [1,1,2,3,1]
+  public static boolean containsNearbyDuplicate2(int[] nums, int k) {
+
+    if (nums == null || nums.length == 0) {
+      return false;
+    }
+
+    int left = 0, right = 0;
+    Map<Integer, Integer> window = new HashMap<>();
+    while (right < nums.length) {
+
+      int r = nums[right];
+
+      if (window.containsKey(r) && right - window.get(r) <= k) {
+        return true;
+      }
+
+      window.put(r, right);
+
+      right++;
+
+
+    }
+
+
+    return false;
+  }
+
+
+  @Test
+  public void test2() {
+    boolean b = containsNearbyDuplicate2(new int[]{1, 2, 3, 1}, 2);
+    System.out.println(b);
   }
 
   public static void main(String[] args) {
