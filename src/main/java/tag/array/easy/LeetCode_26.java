@@ -1,7 +1,10 @@
 package tag.array.easy;
 
+import org.junit.Test;
+
 /**
- * 移除数组中重复的元素
+ * 移除数组中重复的元素，返回新数组的长度
+ *
  * 技巧:快慢指针
  *
  * @author zrfan
@@ -10,7 +13,7 @@ package tag.array.easy;
 public class LeetCode_26 {
 
 
-  public int remove(int[] arr) {
+  public static int remove(int[] arr) {
 
     if (arr == null || arr.length == 0) {
       return 0;
@@ -34,10 +37,10 @@ public class LeetCode_26 {
 
   }
 
-  public static void main(String[] args) {
+  @Test
+  public void test() {
 
-    LeetCode_26 leetCode_26 = new LeetCode_26();
-    int res = leetCode_26.remove(new int[]{2, 2, 3, 3, 4, 5});
+    int res = remove(new int[]{2, 2, 3, 3, 4, 5});
     System.out.println(res);
   }
 
