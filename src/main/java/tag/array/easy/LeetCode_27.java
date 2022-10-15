@@ -1,5 +1,7 @@
 package tag.array.easy;
 
+import org.junit.Test;
+
 /**
  * Input: nums = [3,2,2,3], val = 3
  * Output: 2, nums = [2,2,_,_]
@@ -14,7 +16,7 @@ package tag.array.easy;
 public class LeetCode_27 {
 
 
-  public int removeElement(int[] nums, int val) {
+  public static int removeElement(int[] nums, int val) {
 
     int slow = 0, fast = 0;
 
@@ -32,9 +34,29 @@ public class LeetCode_27 {
     return slow;
   }
 
-  public static void main(String[] args) {
-    LeetCode_27 leetCode_27 = new LeetCode_27();
-    int i = leetCode_27.removeElement(new int[]{3, 3, 2, 2, 2}, 3);
+
+  public static int removeElement2(int[] nums, int val) {
+
+    int slow = 0, fast = 0;
+
+    for (int i = 0; i < nums.length; i++) {
+
+      if (nums[fast] != val) {
+        nums[slow] = nums[fast];
+        slow++;
+      }
+
+      fast++;
+
+    }
+
+    return slow;
+
+  }
+
+  @Test
+  public void main() {
+    int i = removeElement2(new int[]{3, 2, 2, 3}, 3);
     System.out.println(i);
   }
 }
