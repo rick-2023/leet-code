@@ -22,7 +22,7 @@ public class Difference {
   }
 
 
-  private void add(int i, int j, int val) {
+  public void add(int i, int j, int val) {
 
     diff[i] += val;
 
