@@ -1,4 +1,4 @@
-package tag.prefixSum;
+package tag.array.prefixSum;
 
 /**
  * 还是有点不清楚.......

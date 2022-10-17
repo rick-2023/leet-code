@@ -1,4 +1,4 @@
-package tag.prefixSum;
+package tag.array.prefixSum;
 
 import java.util.HashMap;
 import java.util.Map;

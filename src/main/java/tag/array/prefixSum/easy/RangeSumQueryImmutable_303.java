@@ -1,4 +1,4 @@
-package tag.prefixSum.easy;
+package tag.array.prefixSum.easy;
 
 /**
  * @author zrfan
