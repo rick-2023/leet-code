@@ -3,6 +3,8 @@ package tag.array.diff;
 import java.util.Arrays;
 
 /**
+ * 差分数组最基本实现
+ *
  * @author zrfan
  * @date 2022/10/17.
  */
@@ -27,6 +29,7 @@ public class Difference {
     diff[i] += val;
 
     if (j + 1 < diff.length) {
+      // j+1以后的 nums都会顺延 -val
       diff[j + 1] -= val;
     }
 
