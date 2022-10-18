@@ -21,9 +21,12 @@ public class CarPooling_1094 {
     for (int k = 0; k < row; k++) {
 
       int val = trips[k][0];
+
       int i = trips[k][1];
       int j = trips[k][2];
 
+      // 第 trip[2] 站乘客已经下车，
+      // 即乘客在车上的区间是 [trip[1], trip[2] - 1]
       add(i, j - 1, val);
 
     }
