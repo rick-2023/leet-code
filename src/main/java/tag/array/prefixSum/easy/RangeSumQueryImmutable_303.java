@@ -26,6 +26,7 @@ public class RangeSumQueryImmutable_303 {
 
 
   public static void main(String[] args) {
+
     RangeSumQueryImmutable_303 rangeSumQueryImmutable_303 = new RangeSumQueryImmutable_303(new int[]{2, 4, -1, 3});
     int i = rangeSumQueryImmutable_303.sumRange(0, 3);
     System.out.println(i);
