@@ -9,9 +9,10 @@ import java.util.Arrays;
 public class LeetCode_287 {
 
   /**
-   *
    * Input: [1,3,4,2,2]
    * Output: 2
+   *
+   * 先排序 i 和 i-1 相等。。。
    * @param nums
    * @return
    */
@@ -20,8 +21,8 @@ public class LeetCode_287 {
 
 
     Arrays.sort(nums);
-    for(int i=1;i<nums.length;i++){
-      if(nums[i-1] == nums[i]){
+    for (int i = 1; i < nums.length; i++) {
+      if (nums[i - 1] == nums[i]) {
         return nums[i];
       }
     }
