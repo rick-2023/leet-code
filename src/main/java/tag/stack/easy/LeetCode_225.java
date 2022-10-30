@@ -28,6 +28,7 @@ public class LeetCode_225 {
   public int pop() {
 
     int size = queue.size();
+    // 当队列元素大于2时，不断将队头元素加到队尾，直到剩下两个
     while (size > 2) {
       queue.offer(queue.poll());
       size--;

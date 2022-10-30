@@ -6,7 +6,8 @@ import java.util.Stack;
 /**
  * 2022.9.24 重做该题，基于单调栈
  *
- *
+ *Input: temperatures = [73,74,75,71,69,72,76,73]
+ * Output: [1,1,4,2,1,1,0,0]
  *
  * @author zrfan
  * @date 2020/02/03.
