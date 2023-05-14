@@ -46,7 +46,7 @@ public class RemoveDuplicatesFromSortedList_83 {
     // 1->1->2
 
     if (head == null) {
-      return head;
+      return null;
     }
 
     ListNode slow = head, fast = head;
