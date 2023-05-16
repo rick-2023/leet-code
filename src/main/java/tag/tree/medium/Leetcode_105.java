@@ -1,4 +1,4 @@
-package tag.树.medium;
+package tag.tree.medium;
 
 import java.util.Arrays;
 

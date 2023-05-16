@@ -1,4 +1,4 @@
-package tag.树.easy;
+package tag.tree.easy;
 
 import javax.swing.tree.TreeNode;
 
