@@ -52,6 +52,7 @@ public class DesignFrontMiddleBackQueue_1670 {
     if (queue.isEmpty()){
       return -1;
     }
+
     return queue.removeLast();
   }
 
