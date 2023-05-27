@@ -5,15 +5,15 @@ import java.util.Map;
 
 /**
  * 深拷贝链表
- *
+ * <p>
  * 思路 用一个Map维护拷贝前后新旧node之间的映射，第一次遍历先维护val,第二次从map取出维护next和random
- *
+ *</p>
  * @author zrfan
  * @date 2023/05/27.
  */
 public class CopyListWithRandomPointer_138 {
 
-  class Node {
+  static class Node {
     int val;
     Node next;
     Node random;
