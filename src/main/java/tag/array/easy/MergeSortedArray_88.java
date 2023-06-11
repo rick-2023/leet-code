@@ -6,6 +6,7 @@ import java.util.Arrays;
 
 /**
  * 从nums1尾巴开始扫描，依次比较n1, n2的值，那个大就依次放入nums1的尾巴，i--
+ *
  * @author zrfan
  * @date 2023/06/11.
  */
@@ -15,31 +16,32 @@ public class MergeSortedArray_88 {
 
     int len = nums1.length;
 
-    int i1 = m - 1, i2 = n - 1;
     for (int i = len - 1; i >= 0; i--) {
 
+      m = m - 1;
+      n = n - 1;
 
-      if (i1 < 0) {
-        nums1[i] = nums2[i2];
-        i2--;
+      if (m < 0) {
+        nums1[i] = nums2[n];
+        n--;
         continue;
       }
 
-      if (i2 < 0) {
-        nums1[i] = nums1[i1];
-        i1--;
+      if (n < 0) {
+        nums1[i] = nums1[m];
+        m--;
         continue;
       }
 
-      if (nums2[i2] >= nums1[i1]) {
+      if (nums2[n] >= nums1[m]) {
 
-        nums1[i] = nums2[i2];
-        i2--;
+        nums1[i] = nums2[n];
+        n--;
 
       } else {
 
-        nums1[i] = nums1[i1];
-        i1--;
+        nums1[i] = nums1[m];
+        m--;
 
       }
 
